@@ -1,0 +1,25 @@
+%信号x(n)= e^(zn)序列图
+clf;
+z1=-1/12+j*pi/6;z2=1/12+j*pi/6;z3=1/12;z4=2+j*pi/6;z5=j*pi/6;
+n=0:20;
+x1=exp(z1*n);x2=exp(z2*n); x3=exp(z3*n);x4=exp(z4*n); x5=exp(z5*n); 
+subplot(5,2,1);
+stem(n,real(x1)); xlabel ('时间序列n');ylabel('实部');title('复指数z1=-1/12+j*pi/6时序列实部');
+subplot(5,2,2);
+stem(n,imag(x1)); xlabel ('时间序列n');ylabel('虚部');title('复指数z1=-1/12+j*pi/6时序列虚部');
+subplot(5,2,3);
+stem(n,real(x2)); xlabel ('时间序列n');ylabel('实部');title('复指数z2=1/12+j*pi/6时序列实部');
+subplot(5,2,4);
+stem(n,imag(x2)); xlabel ('时间序列n');ylabel('虚部');title('复指数z2=1/12+j*pi/6时序列虚部');
+subplot(5,2,5);
+stem(n,real(x3)); xlabel ('时间序列n');ylabel('实部');title('复指数z3=1/12时序列实部');
+subplot(5,2,6);
+stem(n,imag(x3)); xlabel ('时间序列n');ylabel('虚部');title('复指数z3=1/12时序列虚部');
+subplot(5,2,7);
+stem(n,real(x4)); xlabel ('时间序列n');ylabel('实部');title('复指数z4=2+j*pi/6时序列实部');
+subplot(5,2,8);
+stem(n,imag(x4)); xlabel ('时间序列n');ylabel('虚部');title('复指数z4=2+j*pi/6时序列虚部');
+subplot(5,2,9);
+stem(n,real(x5)); xlabel ('时间序列n');ylabel('实部');title('复指数z5=j*pi/6时序列实部');
+subplot(5,2,10);
+stem(n,imag(x5)); xlabel ('时间序列n');ylabel('虚部');title('复指数z5=j*pi/6时序列虚部');
