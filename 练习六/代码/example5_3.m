@@ -1,0 +1,20 @@
+% 双线性变换法（切比雪夫原型）：
+fs = 10000;
+ws1=2*fs*tan(0.3*pi/2);
+ws2=2*fs*tan(0.8*pi/2);
+wp1=2*fs*tan(0.45*pi/2);
+wp2=2*fs*tan(0.65*pi/2);
+ws=[ws1 ws2];wp=[wp1 wp2];
+Rp=1;Rs=40;
+[N,Wn]=cheb1ord(wp,ws,Rp,Rs,'s');
+[num,den]=cheby1(N,1,Wn,'s');
+[B,A]=bilinear(num,den,fs); 
+[h,w]=freqz(B,A);
+f=w/pi*5000;
+subplot(2,1,1);
+plot(f,20*log10(abs(h))); 
+axis([0,5000,-60,10]);
+grid; xlabel('频率/Hz') ;ylabel('幅度/dB');
+subplot(2,1,2);
+plot(f,angle(h));
+grid; xlabel('频率/Hz') ;ylabel('相位');
