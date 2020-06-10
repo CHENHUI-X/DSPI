@@ -1,6 +1,6 @@
     num=[1 -0.1 -0.3 -0.3 -0.2];%零点
 	den=[1 0.1 0.2 0.2 0.5];%极点zpk分别是零极点增益系数
-	[z,p,k]=tf2zp(num,den);
+	[z,p,k]=tf2zp(num,den);%求解系统零极点
 	m=abs(p);
 	disp('零点');disp(z);
 	disp('极点');disp(p);

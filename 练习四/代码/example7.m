@@ -8,4 +8,4 @@ disp('增益系数');disp(k);
 figure(1)
 zplane(num,den)
 figure(2)
-freqz(num,den,128) 
+freqz(num,den,128) %直接画出系统频率响应和相位响应

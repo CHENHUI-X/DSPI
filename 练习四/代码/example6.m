@@ -2,10 +2,10 @@
 k=256;
 num=[0,0,1,1];
 den=[1,-1,0,0];
-w=0:pi/k:pi;
-	h=freqz(num,den,w);
+w=0:pi/k:pi;%数字频率
+	h=freqz(num,den,w);%返回系统频率响应
 	subplot(2,2,1);
-	plot(w/pi,real(h));grid
+	plot(w/pi,real(h));grid%归一化频率
 	title('实部')
 	xlabel('\omega/\pi');ylabel('幅度')
 	subplot(2,2,2);

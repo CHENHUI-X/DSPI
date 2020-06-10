@@ -6,7 +6,7 @@ disp('极点');disp(p);
 disp('增益系数');disp(k);
 figure(1)
 zplane(num,den)%直接根据系统函数系数绘制零极点
-legend('零点','极点')
 %等价这句话 zplane(z,p)
+legend('零点','极点')
 figure(2)
 freqz(num,den,128)
